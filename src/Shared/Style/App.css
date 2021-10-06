@@ -1,0 +1,638 @@
+/* html{
+    height:100vh;
+    scroll-behavior: smooth;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color:red; */
+  /* height: auto; */
+  height:auto;
+  scroll-behavior: smooth;
+  background-color: #f0f6f6;
+  padding-bottom: 20px;
+}
+
+/* login css completed */
+#inner-div {
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  /* background-color: brown; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f6f6;
+}
+.left-div {
+  flex: 40%;
+  height: 600px;
+
+  /* background-color: black; */
+}
+.right-div {
+  flex: 60%;
+  height:600px;
+
+  /* background-color: red; */
+}
+#loginImg {
+  height: 500px;
+  /* background-color:yellow; */
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  /* margin-left: auto; */
+  /* margin-top:50px; */
+
+  /* transform: translate(-50%); */
+}
+.login-img {
+  height: 500px;
+  width:400px;
+  /* margin-left:40px; */
+  /* margin-top: 50px; */
+  /* width:500px; */
+}
+
+#login-fields {
+  width: 400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  /* overflow: hidden; */
+  /* background-color: brown; */
+}
+.is-success {
+  width: 400px;
+  margin-left: auto;
+}
+.notRegister {
+  text-align: center;
+  color: lightslategray;
+}
+
+/* login css completed */
+
+/* //signup css started */
+/* #main_div_signup { */
+  /* background-color: crimson; */
+  /* height: 100vh;
+  overflow: hidden;
+  background-color: #f0f6f6;
+} */
+/* #signUp-div {
+  height: 500px;
+  width: 400px; */
+  /* background-color: chocolate; */
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+} */
+.signUp_page
+{
+  height:auto;
+  background-color: #f0f6f6;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f0f6f6 ;
+  align-items: center;
+  flex-direction: row;
+  /* overflow-y: hidden; */
+  flex-wrap: wrap;
+}
+.signUpImg_div
+{
+  width:40%;
+  height:600px;
+  /* background-color: #b61919; */
+
+
+}
+.signUpImg_div img
+{
+  width:600px;
+  height:600px;
+}
+.signUpForm
+{
+  width:60%;
+  height:600px;
+  /* background-color: yellow; */
+  
+}
+#form_area
+{
+width:400px;
+height:500px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 80px;
+}
+
+
+
+
+/* signup css completed */
+
+/* navbar  starts*/
+#three-button {
+  display: flex;
+  justify-content: space-between;
+}
+/* navbar ends */
+
+/* categories start */
+#categories {
+  width: 100%;
+  height: auto;
+  /* background-color: black; */
+  /* background-color: transparent; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  /* padding-bottom: 20px; */
+}
+#categories_product {
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  margin-top: 10px;
+  /* padding-top: 30px; */
+  font-size: 20px;
+}
+.catImg {
+  height: 60px;
+  width: 60px;
+}
+.catImg:hover {
+  transform: scale(1.18);
+}
+.cardImg {
+  height: 250px;
+  /* width:80px; */
+}
+.cardImg:hover {
+  transform: scale(1.08);
+}
+/* categories ends */
+
+/* deals start */
+#deals_white_box {
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* background-color: yellow; */
+  background-color: white;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  /* padding-left:10px; */
+
+  /* position: absolute; */
+}
+.productDetails {
+  margin: 10px;
+  padding: 10px;
+}
+.headingButton {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.archit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+
+  /* width:80%; */
+  justify-content: space-between;
+}
+
+/* .productImage
+{
+    height:200px;
+
+} */
+
+.Headings {
+  width: 100%;
+  height: auto;
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* position: relative;
+    top:-96px; */
+}
+
+.dealsHeading {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+.deal_button {
+  float: right;
+  padding-top: 20px;
+  margin-right: 20px;
+}
+.deal_button button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 17px;
+  height: 50px;
+  width: 100px;
+  background: #2874f0;
+  color: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  text-transform: uppercase;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+#price {
+  color: green;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  /* padding-top: 30px; */
+}
+
+/* deals end */
+
+/* order css started */
+.heading_order {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 10px;
+  color: #152d35;
+}
+.cards {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* background-color: yellow; */
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  padding-bottom: 20px;
+  /* position: absolute; */
+}
+
+.order_image {
+  flex: 20%;
+  /* background-color: black; */
+  min-height: 200px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+.order_image {
+  margin-top: 25px;
+}
+.order_image img:hover {
+  transform: scale(1.08);
+}
+.order_details {
+  flex: 50%;
+  /* background-color: red; */
+  min-height: 200px;
+  text-align: center;
+}
+.product_headings {
+  color: black;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 40px;
+  /* margin-left: 20px; */
+
+  padding-bottom: 10px;
+}
+.description {
+  color: grey;
+  /* margin-left: 20px; */
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.productPrice {
+  color: green;
+  /* margin-left: 20px; */
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.orderButtons {
+  width: 100%;
+  /* background-color: yellow; */
+  height: auto;
+}
+.orderButtons button {
+  margin: 1%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+  /* border:5px solid grey; */
+  /* background-color: whitesmoke; */
+  /* color:darkslategray; */
+  /* font-weight: bold; */
+  width: 50%;
+  border-radius: 25px;
+  /* border-radius: 5px; */
+}
+.removeBtn {
+  background-color: #f1ecc3;
+  text-transform: uppercase;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+}
+.BagBtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: #ff3f6c;
+  text-transform: uppercase;
+  color: whitesmoke;
+
+  /* font-weight: bolder; */
+}
+.fa-shopping-bag,
+.fa-heart {
+  color: #b61919;
+}
+
+/* order css ends */
+
+/* empty css starts */
+
+.empty {
+  height: 480px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top:50px; */
+  /* background-color: black; */
+}
+.empty img {
+  height: 200px;
+  width: 200px;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+.empty_details {
+  text-align: center;
+}
+.empty_details button {
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff3f6c;
+  margin-top: 20px;
+  border: none;
+  border: 1px solid #ff3f6c;
+  outline: none;
+}
+/* empty css ends */
+.AddProduct {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #444941;
+  color: white;
+}
+#admin_page {
+  width:100%;
+  height: auto;
+  background-color: #f0f6f6;
+}
+.admin-nav {
+  width: 100%;
+  height: 70px;
+  background-color: #212529;
+  overflow: hidden;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #32383e;
+  margin-top: 30px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 20px;
+  font-weight: bolder;
+}
+th {
+  font-size: 25px;
+}
+
+tr:nth-child(even) {
+  background-color: #212529;
+  color: white;
+  font-weight: bolder;
+}
+.fa-edit,
+.fa-trash {
+  font-size: 25px;
+}
+.fa-window-close {
+  color: red;
+  font-size: 25px;
+}
+hr {
+  color: red;
+}
+/* //individual component */
+.individualComponent {
+  height: auto;
+  background-color: #f0f6f6;
+}
+.individualComponent h1 {
+  text-align: center;
+  font-size: 4em;
+}
+.individualImage {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  height: auto;
+  /* align-items:center; */
+  /* margin:5%; */
+  /* padding-bottom: 200px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.image1 {
+  /* flex:20%; */
+  height: 250px;
+  margin: 20px;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+.image1:hover {
+  transform: scale(1.08);
+}
+/* modal styling for individual image */
+.parentModal {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.child_1_for_ModalImage {
+  flex: 50%;
+
+  /* background-color: #444941; */
+}
+.child_2_for_ModalImage {
+  flex: 50%;
+
+  /* text-align: center; */
+}
+
+.child_2_for_ModalImage button {
+  display: block;
+  /* margin:20px; */
+  width: 100%;
+  margin: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 30px;
+  background-color: #ff3f6c;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+.order_cart_details {
+  flex: 50%;
+  /* background-color: red; */
+  min-height: 200px;
+  /* text-align: center; */
+
+  /* margin-top: 40px; */
+}
+.order_headings,
+.order_description,
+.order_price,
+.order_orderNumber,
+.order_date {
+  /* padding:5px; */
+  margin-left: 50px;
+  margin-top: 25px;
+}
+.order_orderNumber {
+  color: red;
+}
+.loader_div
+{
+  
+  
+  background-color: transparent;
+  /* margin-right:50px; */
+  position: absolute;
+  top:200px;
+  
+  left:600px
+ 
+ 
+
+}
+.outer_loader_div
+{
+  width:100vw;
+  height: 100vh;
+  position: relative;
+  /* background-color: red; */
+ 
+}
+.errorPage
+{
+  width:100%;
+  height:100vh;
+  overflow: hidden;
+  background-color: white;
+
+}
+.errorImg
+{
+  width:500px;
+  height:500px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #ff3f6c; */
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query for all pages */
+
+@media only screen and (max-width: 768px)
+{
+  .signUpForm
+  {
+    width:500px;
+  }
+  .signUpImg_div
+  {
+    width:400px;
+  }
+  
+  .orderButtons button
+  {
+    width:80%;
+  }
+}
