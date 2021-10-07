@@ -7,10 +7,12 @@ function Categories() {
       <div id="categories">
         {Wishes.map((obj) => (
           <CategoryBox
+            
             image={obj.image}
             productName={obj.product_name}
             categoryProductImg={"catImg"}
           />
+          
         ))}
       </div>
     </>

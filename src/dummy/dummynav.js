@@ -1,7 +1,8 @@
 
+
 const wishes = [
     {
-      
+       
         product_name:'Fashion',
         image:'https://cdn-icons-png.flaticon.com/128/1198/1198358.png'
     },
@@ -12,17 +13,17 @@ const wishes = [
     },
     {
        
-        product_name:'Beauty',
+        product_name:'Beauty&Makeup',
         image:'https://cdn-icons-png.flaticon.com/128/5705/5705441.png'
     },
     {
        
-        product_name:'Footwears',
+        product_name:'Footwear',
         image:'https://img-premium.flaticon.com/png/128/1040/premium/1040283.png?token=exp=1633325976~hmac=6373939d143836b5e9516a3e235e370e'
     },
     {
       
-        product_name:'Handbags',
+        product_name:'Handbags&Bags',
         image:'https://cdn-icons-png.flaticon.com/128/1508/1508652.png'
     },
         {

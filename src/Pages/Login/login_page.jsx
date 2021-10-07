@@ -19,6 +19,10 @@ function Login() {
 
    }
  )
+
+ // validation state
+//  const [errorValidate, setErrorValidate] = useState(false);
+
 // handle change 
 const handleChange =(e)=>
 {
@@ -26,6 +30,10 @@ const handleChange =(e)=>
     setLoginDetails({...loginDetails,[name]:value});
    
 }
+
+   
+
+
 
 // console.log(loginD
 
@@ -41,6 +49,7 @@ const loginApi= async()=>
       ("http://localhost:4000/api/signin",loginDetails);
    
       setIsLoading(false)
+    
       
       
       if( response.data.error)
@@ -71,6 +80,7 @@ const loginApi= async()=>
           });
 
         console.log("response is" , response);
+       
         //save user and token in local storage
         localStorage.setItem('userEmail', JSON.stringify(response.data.data.user));
         localStorage.setItem('token', JSON.stringify(response.data.data.token));
@@ -83,12 +93,12 @@ const loginApi= async()=>
         {
           history.push("/")
         }
+       
       }
 
 
     
     }
-    
       
     catch(error)
     {
@@ -96,7 +106,8 @@ const loginApi= async()=>
       console.log("error" , error.message);
     }
 
-
+    
+   
 }
 
 
@@ -107,11 +118,12 @@ const loginApi= async()=>
     <>
     <div className="signUp_page">
       <div className="signUpImg_div">
-      <img style={{width:"500px",height:"500px",marginTop:"30px"}}
+      <img style={{width:"500px",height:"500px",marginTop:"30px", marginLeft:"50px"}}
             
            
            src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png"
-            alt="login-page"
+           
+           alt="login-page"
           />
 
       </div>
@@ -124,6 +136,7 @@ const loginApi= async()=>
                        className="input"
                        type="email"
                        name="email"
+                       
                        placeholder="Email"
                      ></input>
                      <span className="icon is-small is-left">
@@ -132,6 +145,8 @@ const loginApi= async()=>
                      <span className="icon is-small is-right">
                        <i className="fas fa-check"></i>
                      </span>
+                    {/* {errorValidate? "invalid email" : ""} */}
+                    
                    </p>
                  </div>
               
@@ -146,6 +161,7 @@ const loginApi= async()=>
                      <span className="icon is-small is-left">
                        <i className="fas fa-lock"></i>
                      </span>
+                     {/* {errorValidate? "password length must be greater than 3" : ""} */}
                    </p>
                  </div>
                  <div className="field">

@@ -18,7 +18,7 @@ function Home() {
         <Deals category={"Footwear"} />
         <Deals category={"Beauty&Makeup"} />
         <Deals category={"Accessories"} />
-        <Deals category={"Handbags And Bags"} />
+        <Deals category={"Handbags&Bags"} />
  
  </>
   );
