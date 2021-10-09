@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 function Navbar() {
   const [checkLogin, setCheckLogin] = useState("");
   const [user, setUser] = useState("");
+  const [isActive, setisActive] = React.useState(false);
   
 
   useEffect(() => {
@@ -14,7 +15,7 @@ function Navbar() {
   return (
     <>
       <div id="my_nav_bar  ">
-        <nav
+        <nav 
           className="navbar is-dark  "
           role="navigation"
           aria-label="main navigation"
@@ -30,8 +31,11 @@ function Navbar() {
             </a>
 
             <a
+            onClick={() => {
+              setisActive(!isActive);
+            }}
               role="button"
-              className="navbar-burger"
+              className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
               aria-label="menu"
               aria-expanded="false"
               data-target="navbarBasicExample"
@@ -43,7 +47,7 @@ function Navbar() {
             </a>
           </div>
 
-          <div id="navbarBasicExample" className="navbar-menu">
+          <div id="navbarBasicExample" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
             <div className="navbar-start">
               <div id="searchBar"></div>
             </div>
