@@ -5,15 +5,18 @@ import categoryArray from "./categoryDataArray";
 
 const customStyles = {
   content: {
-    top: "50%",
+    top: "49%",
     left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width:"450px"
+    width:"450px",
+    height:'600px'
   },
 };
+
+
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#root");
@@ -29,11 +32,16 @@ function AddProductModal(props) {
   // )
   
   //handle change
-
+  const[pictureUrl,setPicture]= React.useState(
+    {
+      picture:""
+    }
+  );
   const handleChangeInProduct=(e)=>
 {
     const{name,value} = e.target;
     console.log(name,value);
+
     props.setStateVariable({...props.StateVariable,[name]:value})
 
 }
@@ -45,6 +53,23 @@ function AddProductModal(props) {
   function closeModal() {
     setIsOpen(false);
   }
+const uploadSingleFile=(e)=>
+{
+if(e.target.files[0])
+{
+  console.log(e.target.files[0])
+  var reader= new FileReader();
+  reader.readAsDataURL(e.target.files[0])
+  reader.onloadend=()=>
+  {
+    console.log(reader.result);
+    setPicture({"picture":reader.result})
+    console.log("picture link:" ,pictureUrl)
+   
+    props.setStateVariable({...props.StateVariable,pictureUrl})
+  }
+}
+}
 
   return (
     <div>
@@ -93,38 +118,9 @@ function AddProductModal(props) {
              </input>
           </div>
         </div>
-        <div className="field">
-          <label className="label">Image Link</label>
-          <div className="control">
-            <input 
-            class="input" 
-            type="text"
-            name="picture"
-             placeHolder="e.g https://cdn.pixabay.com/photo/2019/05/23/13/11/headphones-4223911__34.jpg"
-             onChange={handleChangeInProduct}
-             >
-            
-             </input>
-          </div>
-        </div>
+    
 
-{/* <div className="file has-name">
-  <label className="file-label">
-    <input class="file-input" type="file"   name="picture"   onChange={handleChangeInProduct}>
-    <span className="file-cta">
-      <span className="file-icon">
-        <i className="fas fa-upload"></i>
-      </span>
-      <span className="file-label">
-        Choose a file…
-      </span>
-    </span>
-    <span className="file-name">
-      Screen Shot 2017-07-29 at 15.54.25.png
-    </span>
-    </input>
-  </label>
-</div> */}
+
         <div className="field">
           <label className="label">Category</label>
           <div className="control">
@@ -154,9 +150,27 @@ function AddProductModal(props) {
             </textarea>
           </div>
         </div>
+        <div class="file is-info has-name is-fullwidth">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume"  onChange={uploadSingleFile}/>
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose File
+      </span>
+    </span>
+    <span  class="file-name" >
+      {/* Screen Shot 2017-07-29 at 15.54.25.png */}
+    </span>
+  </label>
+</div>
        
           <div className="control">
-            <button style={{marginLeft:'160px'}} className="button is-link "
+           
+
+            <button style={{marginLeft:'160px',marginTop:"30px"}} className="button is-link "
             onClick={()=>
             {
                
