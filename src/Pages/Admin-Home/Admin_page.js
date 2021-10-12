@@ -15,7 +15,7 @@ function AdminPage() {
     price: "",
     description: "",
     category:"",
-  //  picture:""
+    picture:""
   });
 
   //when component will mount first time
