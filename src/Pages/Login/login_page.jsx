@@ -110,10 +110,6 @@ const loginApi= async()=>
    
 }
 
-
-
-
-
   return (
     <>
     <div className="signUp_page">

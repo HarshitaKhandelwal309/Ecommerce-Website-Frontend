@@ -33,9 +33,10 @@ function AddProductModal(props) {
   const [pictureUrl, setPicture] = React.useState("");
   const handleChangeInProduct = (e) => {
     const { name, value } = e.target;
+    props.setStateVariable({ ...props.StateVariable, [name]: value });
     console.log(name, value);
 
-    props.setStateVariable({ ...props.StateVariable, [name]: value });
+    
   };
 
   function openModal() {
@@ -53,10 +54,10 @@ function AddProductModal(props) {
       reader.onloadend = () => {
         console.log(reader.result);
         setPicture(reader.result);
-        console.log("picture link:", pictureUrl);
+        console.log("picture link:", pictureUrl,"reader result",reader.result);
         props.setStateVariable({
           ...props.StateVariable,
-          ["picture"]: pictureUrl,
+          ["picture"]: reader.result,
         });
 
         
