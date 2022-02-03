@@ -19,7 +19,7 @@ const wishes = [
     {
        
         product_name:'Footwear',
-        image:'https://cdn-icons.flaticon.com/png/128/3669/premium/3669783.png?token=exp=1633969486~hmac=477b57b17c0b74fb5e264bafd4cb228c'
+        image:'https://cdn-icons-png.flaticon.com/512/24/24697.png'
     },
     {
       

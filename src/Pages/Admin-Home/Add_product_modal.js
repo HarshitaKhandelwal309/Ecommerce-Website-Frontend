@@ -166,7 +166,9 @@ function AddProductModal(props) {
         </div>
 
          <div className="field">
-            <img src={pictureUrl} alt="img" />
+           {pictureUrl==""? <img style={{height:"100px",width:"100px", display:"none"}} src={pictureUrl}  />:
+            <img style={{height:"100px",width:"100px", border:"none"}} src={pictureUrl}  />
+          }
            </div>     
         <div className="control">
           <button
