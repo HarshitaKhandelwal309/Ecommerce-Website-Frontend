@@ -23,7 +23,7 @@ function Deals(props) {
         setIsLoading(true)
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/get/product/home/${props.category}`
+          `https://fashion-hub-server.herokuapp.com/api/get/product/home/${props.category}`
         );
         setIsLoading(false)
         console.log(response.data.data);

@@ -30,7 +30,7 @@ function SignUp() {
     // console.log(signUpDetails);
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/signup?isAdmin=false",
+        "https://fashion-hub-server.herokuapp.com/api/signup?isAdmin=false",
         signUpDetails
       );
       setIsLoading(false);

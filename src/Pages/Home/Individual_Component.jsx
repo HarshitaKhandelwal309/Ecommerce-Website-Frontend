@@ -21,7 +21,7 @@ function Category() {
       setIsLoading(true)
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/get/product/home/${category}`
+          `https://fashion-hub-server.herokuapp.com/api/get/product/home/${category}`
         );
         if(response.data.error)
         {

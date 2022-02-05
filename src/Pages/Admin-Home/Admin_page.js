@@ -32,7 +32,7 @@ function AdminPage() {
       // console.log(token);
       //hitting api and pass headers for token becz i used auth middleware
       const response = await axios.get(
-        "http://localhost:4000/api/get/product",
+        "https://fashion-hub-server.herokuapp.com/api/get/product",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       if (response.data.error) {
@@ -62,7 +62,7 @@ function AdminPage() {
     try {
       const token = JSON.parse(localStorage.getItem("token"));
       const response = await axios.post(
-        "http://localhost:4000/api/add/product",
+        "https://fashion-hub-server.herokuapp.com/api/add/product",
         stateVariable,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -101,7 +101,7 @@ function AdminPage() {
     try {
       const token = JSON.parse(localStorage.getItem("token"));
       const response = await axios.delete(
-        `http://localhost:4000/api/delete/product?_id=${_id}`,
+        `https://fashion-hub-server.herokuapp.com/api/delete/product?_id=${_id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       toast.warn('Product Deleted !', {
@@ -141,7 +141,7 @@ function AdminPage() {
       // console.log(stateVariable);
       console.log("my object", obj);
       const response = await axios.patch(
-        `http://localhost:4000/api/update/product?_id=${_id}`,
+        `https://fashion-hub-server.herokuapp.com/api/update/product?_id=${_id}`,
         {
           productName: obj.productName,
           price: obj.price,

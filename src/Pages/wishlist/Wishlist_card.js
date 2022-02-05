@@ -17,7 +17,7 @@ function WishlistCard(props) {
       // setCheckLogin(JSON.parse(localStorage.getItem('token')))
       const token = JSON.parse(localStorage.getItem("token"));
       const response = await axios.post(
-        "http://localhost:4000/api/place/order",
+        "https://fashion-hub-server.herokuapp.com/api/place/order",
         {
           product_id: id,
           orderDate: new Date().toString().split(" ").splice(1, 3).join(" "),

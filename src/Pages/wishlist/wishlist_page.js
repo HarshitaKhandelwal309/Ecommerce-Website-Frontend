@@ -25,7 +25,7 @@ function Wishlist_page() {
     try {
       const token = JSON.parse(localStorage.getItem("token"));
       const response = await axios.get(
-        "http://localhost:4000/api/fetchWishlist/product",
+        "https://fashion-hub-server.herokuapp.com/api/fetchWishlist/product",
 
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -72,7 +72,7 @@ function Wishlist_page() {
     try {
       const token = JSON.parse(localStorage.getItem("token"));
       const response = await axios.delete(
-        `http://localhost:4000/api/removeWishlist/product?_id=${id}`,
+        `https://fashion-hub-server.herokuapp.com/api/removeWishlist/product?_id=${id}`,
 
         { headers: { Authorization: `Bearer ${token}` } }
       );

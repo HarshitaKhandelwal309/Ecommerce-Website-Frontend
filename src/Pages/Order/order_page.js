@@ -33,7 +33,7 @@ function Order_page()
           const token = JSON.parse(localStorage.getItem("token"));
           //console.log(token);
           const response = await axios.get(
-            "http://localhost:4000/api/fetch/order",
+            "https://fashion-hub-server.herokuapp.com/api/fetch/order",
     
             { headers: { Authorization: `Bearer ${token}` } }
           );
@@ -85,7 +85,7 @@ function Order_page()
     try{
       const token = JSON.parse(localStorage.getItem("token"));
       const response = await axios.delete(
-        `http://localhost:4000/api/delete/order?_id=${id}`,
+        `https://fashion-hub-server.herokuapp.com/api/delete/order?_id=${id}`,
 
         { headers: { Authorization: `Bearer ${token}` } }
       );
