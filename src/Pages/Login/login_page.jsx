@@ -46,7 +46,7 @@ const loginApi= async()=>
     
     try{
       const response = await axios.post
-      ("https://fashion-hub-server.herokuapp.com//api/signin",loginDetails);
+      ("https://fashion-hub-server.herokuapp.com/api/signin",loginDetails);
    
       setIsLoading(false)
     
